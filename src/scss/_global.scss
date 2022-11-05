@@ -1,0 +1,196 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::backdrop,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+
+}
+
+body {
+    min-height: 320px;
+    overflow-x: hidden;
+    position: relative;
+    color: #000;
+    @extend %Commissioner-regular;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.title {}
+
+.title-fz18 {
+    font-size: 18px;
+}
+
+
+
+.feed-form {
+    position: relative;
+    margin: 0 0 1rem;
+    text-align: left;
+
+    &__row {
+        position: relative;
+    }
+
+    &__input {
+
+        display: block;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #717880;
+        @extend %Commissioner-regular;
+        font-weight: 400;
+        font-size: 16px;
+        height: 52px;
+        padding: 15px 10px 2px 10px;
+        color: #000;
+        transition: border-color .25s, box-shadow .25s;
+        box-shadow: none;
+        border-radius: 5px;
+        margin: 0 0 15px;
+        appearance: none;
+
+    }
+
+    &__input:focus {
+        border-color: #0051D4;
+        box-shadow: 0 0 0 1px #0051d4;
+        background: #fff;
+        transition: all 3s;
+    }
+
+    &__input:focus+&__label {
+        transform: scale(.75) translate(10px, -23px);
+        color: #A9B3BF;
+
+    }
+
+    &__input:valid+&__label {
+        transform: scale(.75) translate(10px, -23px);
+        color: #A9B3BF;
+
+    }
+
+    &__input:invalid {
+        border-color: #D90800;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.52041 0.399902L11.6004 10.4799L10.4804 11.5999L0.400414 1.5199L1.52041 0.399902Z' fill='%23D90800'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.400391 10.4799L10.4804 0.399915L11.6004 1.51991L1.52039 11.5999L0.400391 10.4799Z' fill='%23D90800'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        padding-right: 40px
+    }
+
+    &__input:valid {
+        border-color: #4AD45D;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.9L6.51515 9L15 1' stroke='%234AD45D' stroke-width='2' stroke-miterlimit='10'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        padding-right: 40px
+    }
+
+    &__label {
+        position: absolute;
+        top: 13px;
+        font-weight: 400;
+        font-size: 16px;
+        height: 52px;
+        padding: 2px 10px 2px 10px;
+        transition: .25s;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &__check {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+.button {
+    display: block;
+    width: 100%;
+    background: #035ae6;
+    border: 1px solid #717880;
+    @extend %Commissioner-regular;
+    font-weight: 400;
+    font-size: 16px;
+    height: 38px;
+    padding: 2px 10px 2px 10px;
+    color: #fff;
+    transition: border-color .25s, box-shadow .25s;
+    box-shadow: none;
+    border-radius: 5px;
+
+    &:hover {
+        border-color: #0051D4;
+        background: #0051D4;
+        color: #fff;
+    }
+
+    &:active {
+        border-color: #034cc0;
+        background: #0051D4;
+        color: #fff;
+    }
+}
+
+
+.valid {}
+
+
+.valid:valid {
+    border-color: #4AD45D;
+    background-image: url('../images/icons/valid.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 40px;
+}
+
+.valid:invalid {
+    border-color: #D90800;
+    background-image: url('../images/icons/valid.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding-right: 40px;
+}

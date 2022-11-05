@@ -47,10 +47,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('scripts', function () {
-    return gulp.src(["src/js/**/*.js",
-        'node_modules/fullpage.js/dist/fullpage.js',
-        'node_modules/fullpage.js/dist/fullpage.extensions.min.js',
-        'node_modules/fullpage.js/vendors/easings.min.js'])
+    return gulp.src(["src/js/**/*.js"])
         .pipe(gulp.dest("dist/js"))
         .pipe(browserSync.stream());
 });
