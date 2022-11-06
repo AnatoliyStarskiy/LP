@@ -19,8 +19,7 @@ gulp.task('server', function () {
 });
 
 gulp.task('styles', function () {
-    return gulp.src(["src/scss/**/*.+(scss|sass)",
-        'node_modules/fullpage.js/dist/fullpage.css'])
+    return gulp.src(["src/scss/**/*.+(scss|sass)"])
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename({ suffix: '.min', prefix: '' }))
         .pipe(autoprefixer())
