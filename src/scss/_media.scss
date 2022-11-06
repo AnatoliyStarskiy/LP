@@ -1,29 +1,196 @@
 /* Large desktops and laptops */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
 
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .top {
+        .intro {
+            flex-direction: column;
+        }
+    }
 
+
+    .doctors {
+
+        &__slider-prev,
+        &__slider-next {
+            top: 100%;
+        }
+
+        &__slider-prev {
+            left: 25px;
+        }
+
+        &__slider-next {
+            right: -25px;
+        }
+    }
 }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
+    .top {
+        .intro {
+            flex-direction: column;
+            grid-column: 1 / 12;
+
+            &__detail {
+                width: 600px;
+            }
+        }
+
+        &__form {
+            grid-column: 1/12;
+        }
+
+        .intro__action::after {
+            display: none;
+        }
+    }
+
+    .bottom {
+        &__first {
+            grid-column: 1 / 12;
+
+        }
+
+        &__second {
+            grid-column: 1 / 12;
+
+        }
+
+        &__third {
+            grid-column: 1 / 12;
+
+        }
+    }
+
+    .team {
+        margin: 0 auto;
+    }
+
+    .doctors {
+        &__slider-prev {
+            left: -86px;
+        }
+    }
 
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
+    .top {
+        .intro {
+            flex-direction: column;
+            grid-column: 1 / 12;
 
+            &__detail {
+                width: 450px;
+            }
+        }
+
+        &__form {
+            grid-column: 1/12;
+        }
+
+        .intro__action::after {
+            display: none;
+        }
+    }
+
+    .bottom {
+        &__first {
+            grid-column: 1 / 12;
+
+        }
+
+        &__second {
+            grid-column: 1 / 12;
+
+        }
+
+        &__third {
+            grid-column: 1 / 12;
+
+        }
+    }
+
+    .team {
+        margin: 0 auto;
+    }
+
+    .doctors {
+        &__slider-prev {
+            left: -86px;
+        }
+    }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+    .bottom {
+        .team {
+            margin: 0 auto 40px;
+
+        }
+
+        .doctors {
+
+            &__slider-prev,
+            &__slider-next {
+                top: 100%;
+            }
+
+            &__slider-prev {
+                left: 25px;
+            }
+
+            &__slider-next {
+                right: 75px;
+            }
+        }
+    }
 
 }
 
 /* Iphone 5 */
 @media (max-width: 320px) {
+    .top {
+        .intro {
+            flex-direction: column;
+            grid-column: 1 / 12;
 
+            &__detail {
+                width: 240px;
+            }
+            &__action {
+                width: 235px;
+                height: 90px;
+            }
+        }
+
+        &__form {
+            grid-column: 1/10;
+        }
+
+        .intro__action::after {
+            display: none;
+        }
+    }
+    .bottom {
+        &__first {
+            grid-column: 1 / 10;
+
+        }
+
+        &__second {
+            grid-column: 1 / 10;
+
+        }
+
+        &__third {
+            grid-column: 1 / 10;
+
+        }
+    }
 }
